@@ -21,9 +21,12 @@ module.exports = (on, config) => {
   });
 };
 
+
 module.exports = (config) => {
   config.chromeWebSecurity = false;
   config.env.CYPRESS_NO_XVFB = '1';
+  config.env.headless = true;
+  config.browsers = 'firefox';
 
   return config;
 };
