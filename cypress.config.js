@@ -20,3 +20,10 @@ module.exports = (on, config) => {
     return launchOptions;
   });
 };
+
+module.exports = (config) => {
+  config.chromeWebSecurity = false;
+  config.env.CYPRESS_NO_XVFB = '1';
+
+  return config;
+};
