@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "cypress-chrome" : "cypress run --browser chrome --spec cypress/e2e/1-getting-started/todo.cy.js",
+    "cypress-edge" : "cypress run --browser edge --spec cypress/e2e/1-getting-started/todo.cy.js",
+    "cypress-firefox" : "cypress run --browser firefox --spec cypress/e2e/1-getting-started/todo.cy.js" 
   },
   "author": "",
   "license": "ISC",
