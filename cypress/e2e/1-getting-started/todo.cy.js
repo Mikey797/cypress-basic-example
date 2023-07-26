@@ -11,6 +11,19 @@
 // please read our getting started guide:
 // https://on.cypress.io/introduction-to-cypress
 
+
+module.exports = (on, config) => {
+  on('before:browser:launch', (browser = {}, launchOptions) => {
+    console.log(launchOptions.args);
+
+    if (browser.name === 'chrome' || browser.name === 'edge' || browser.name === 'firefox') {
+      launchOptions.args.push('--disable-gpu');
+    }
+
+    return launchOptions;
+  });
+};
+
 describe('example to-do app', () => {
   beforeEach(() => {
     // Cypress starts out with a blank slate for each test
